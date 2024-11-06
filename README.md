@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Organo - Organograma de Colaboradores
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Organo é um projeto desenvolvido em React para organizar colaboradores de uma escola de tecnologia. Este organograma permite cadastrar colaboradores com informações como nome, cargo, foto, e exibi-los em cards organizados por time. Cada time possui uma cor de destaque para melhor visualização. Este projeto foi meu primeiro utilizando React e uma ótima oportunidade para aprimorar especialmente conhecimentos em manipulação de estado, passagem de props e renderização condicional.
 
-## Available Scripts
+## Funcionalidades do Projeto
 
-In the project directory, you can run:
+- **App.js**: Componente principal do projeto, que mantém o estado dos colaboradores e passa os dados para os componentes filhos.
+- **Banner.js**: Exibição de um banner fixo no topo da página.
+- **Formulario.js**: Componente responsável pelo cadastro de nome, cargo, foto e time dos colaboradores. Recebe props como os times e a função para adicionar novos colaboradores.
+- **Time.js**: Componente que exibe cada time, aplicando cor de fundo e cor principal, configuradas de forma dinâmica.
+- **Rodape.js**: Componente fixo exibido ao final da página.
 
-### `npm start`
+## Aprendizados
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Durante o desenvolvimento do Organo, foram aplicados e aprendidos vários conceitos importantes de React, incluindo:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Passagem de `props` para Componentes**: Utilização de `props` para transmitir dados entre componentes. Por exemplo, o formulário recebe a lista de times e uma função para adicionar colaboradores ao estado do componente pai.
 
-### `npm test`
+- **Uso de `children` para Aninhar Elementos**: Estruturação do componente `Formulario` de modo que elementos filhos sejam passados dinamicamente para o componente.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Manipulação de Eventos com `onSubmit`**: Utilização do evento `onSubmit` para capturar e processar os dados do formulário quando o usuário cadastra um novo colaborador.
 
-### `npm run build`
+- **Manipulação e Transformação de Arrays**: Criação de uma estrutura de dados em array para os times e aplicação de métodos de array para transformar e filtrar os dados. Isso incluiu a utilização de `map` para transformar a lista de times em uma lista de nomes, e `filter` para exibir colaboradores específicos em cada time.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Filtragem de Dados**: Filtragem dos colaboradores para exibir apenas aqueles pertencentes a cada time específico. Isso foi feito utilizando `filter` com uma condição baseada no time selecionado.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Renderização Condicional**: Exibição dos times e colaboradores de forma condicional, ou seja, os times são exibidos somente quando têm colaboradores cadastrados.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tecnologias Utilizadas
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+React, JavaScript ES6 e CSS.
